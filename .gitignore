@@ -3,6 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# YAML Files
+*.yml
+*mintsDefinitions.yaml
+
+
 # C extensions
 *.so
 
