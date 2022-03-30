@@ -3,7 +3,6 @@
 import pickle
 import datetime
 import pandas as pd
-import feather
 import glob
 import os
 from collections import OrderedDict
@@ -15,7 +14,6 @@ from mintsXU4 import mintsProcessing as mP
 from mintsXU4 import mintsDefinitions as mD
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
-import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score
 from sklearn.metrics import mean_squared_error
 

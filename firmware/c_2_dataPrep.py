@@ -4,7 +4,7 @@
 import pickle
 import datetime
 import pandas as pd
-import feather
+#import feather
 import glob
 from collections import OrderedDict
 import os
@@ -20,11 +20,11 @@ rawPklsFolder        = mD.rawPklsFolder
 referencePklsFolder  = mD.referencePklsFolder
 mergedPklsFolder     = mD.mergedPklsFolder
 
-# YXXDR     = mP.superReader(airMarID,"YXXDR")
-# pd.to_pickle(YXXDR ,mP.getPathGeneric(referencePklsFolder,airMarID,"YXXDR","pkl") )
+#YXXDR     = mP.superReader(airMarID,"YXXDR")
+#pd.to_pickle(YXXDR ,mP.getPathGeneric(referencePklsFolder,airMarID,"YXXDR","pkl") )
 
-# WIMDA     = mP.superReader(airMarID,"WIMDA")
-# pd.to_pickle(WIMDA ,mP.getPathGeneric(referencePklsFolder,airMarID,"WIMDA","pkl") )
+#WIMDA     = mP.superReader(airMarID,"WIMDA")
+#pd.to_pickle(WIMDA ,mP.getPathGeneric(referencePklsFolder,airMarID,"WIMDA","pkl") )
 
 WIMDA  = pd.read_pickle(mP.getPathGeneric(referencePklsFolder,airMarID,"WIMDA","pkl"))
 YXXDR  = pd.read_pickle(mP.getPathGeneric(referencePklsFolder,airMarID,"YXXDR","pkl"))

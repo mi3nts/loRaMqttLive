@@ -31,6 +31,8 @@ mintsDefinitions         = yaml.load(open('mintsXU4/mintsDefinitions.yaml'))
 loRaNodesFile            = 'loRaNodes.yml'
 mqttBrokerLoRa           = "mqtt.lora.trecis.cloud"
 mqttPortLoRa             = 1883  # Secure port
+tlsCert                   = mintsDefinitions['tlsCert']
+
 
 def findMacAddress():
     macAddress= get_mac_address(interface="eth0")

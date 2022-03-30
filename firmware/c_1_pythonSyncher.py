@@ -20,8 +20,8 @@ with open(yamlFile) as file:
 
 airMarID = mintsDefinitions['airmarID']
 
-dataFolder = mintsDefinitions['dataFolder']+ "/reference/"
-sysStr = 'rsync -avzrtu -e "ssh" ' +  "--include='*.csv' --include='*/' --exclude='*' mints@10.247.238.16:Downloads/reference/" + airMarID + " " + dataFolder
+dataFolder = mintsDefinitions['dataFolder']+ "/ref/"
+sysStr = 'rsync -avzrtu -e "ssh" ' +  "--include='*.csv' --include='*/' --exclude='*' /home/mints/Downloads/reference/" + airMarID + " " + dataFolder
 
 
 print(sysStr)
@@ -34,6 +34,6 @@ dataFolder = mintsDefinitions['dataFolder']+ "/raw/"
 for nodes in nodeIDs:
     nodeID =  nodes['nodeID']
     print("Syncing data for Node: "+ nodeID)
-    sysStr = 'rsync -avzrtu -e "ssh" ' +  "--include='*.csv' --include='*/' --exclude='*' mints@10.247.238.16:/mfs/io/groups/lary/mintsData/rawMqtt/" + nodeID + " " + dataFolder
+    sysStr = 'rsync -avzrtu -e "ssh" ' +  "--include='*.csv' --include='*/' --exclude='*' /mfs/io/groups/lary/mintsData/rawMqtt/" + nodeID + " " + dataFolder
     print(sysStr)
     os.system(sysStr)

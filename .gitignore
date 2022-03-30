@@ -6,7 +6,7 @@ __pycache__/
 # YAML Files
 *.yml
 *mintsDefinitions.yaml
-
+*.log
 
 # C extensions
 *.so

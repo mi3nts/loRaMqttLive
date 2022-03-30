@@ -4,9 +4,9 @@ from os import name
 import time
 import random
 import pandas as pd
-import pyqtgraph as pg
+#import pyqtgraph as pg
 from collections import deque
-from pyqtgraph.Qt import QtGui, QtCore
+#from pyqtgraph.Qt import QtGui, QtCore
 from mintsXU4 import mintsSensorReader as mSR
 from mintsXU4 import mintsDefinitions as mD
 from mintsXU4 import mintsProcessing as mP
@@ -15,7 +15,7 @@ from mintsXU4 import mintsNow as mN
 
 # from dateutil import tz
 import numpy as np
-from pyqtgraph import AxisItem
+#from pyqtgraph import AxisItem
 from time import mktime
 import statistics
 from collections import OrderedDict
@@ -43,7 +43,7 @@ class node:
         graphUpdateSpeedMs = 200
         lastRecords = 10
         # self.win                 = pg.GraphicsWindow( title="MINTS Ground Vehicle")
-        self.app                 = QtGui.QApplication([])
+        # self.app                 = QtGui.QApplication([])
         # self.lookBack            = timedelta(minutes=5)         
         ## IPS7100
         
@@ -268,6 +268,7 @@ class node:
         mP.writeCSV3( mN.getWritePathDateCSV(liveFolder,self.nodeID,\
             datetime.strptime(self.dateTimeStrCSV,'%Y-%m-%d %H:%M:%S.%f'),\
                 "calibrated"),sensorDictionary)
+        print("CSV Written")
         mL.writeMQTTLatestRepublish(sensorDictionary,"mintsCalibrated",self.nodeID)
 
     def changeState(self):
